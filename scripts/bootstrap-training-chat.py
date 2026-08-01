@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+from pathlib import Path
 
 ORG_ID = "a1111111-1111-4111-8111-111111111111"
 AGENT_ID = "a2222222-2222-4222-8222-222222222222"
@@ -77,6 +78,12 @@ def main() -> int:
                 )
     finally:
         conn.close()
+
+    import subprocess
+    import sys
+
+    seed = Path(__file__).resolve().parents[1] / "scripts" / "seed-billing-training.py"
+    subprocess.run([sys.executable, str(seed)], check=True)
 
     print("OK bootstrap-training-chat")
     print(f"conversation_id={CONV_ID}")

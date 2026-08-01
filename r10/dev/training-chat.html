@@ -173,8 +173,13 @@
           });
           const data = await res.json();
           if (!res.ok) throw new Error(data.error || res.statusText);
-          if (data.reply) addMsg("bot", data.reply);
-          else addMsg("system", "Нет ответа — проверьте OPENAI_API_KEY в cloud Edge secrets");
+          if (data.error) {
+            addMsg("system", data.error);
+          } else if (data.reply) {
+            addMsg("bot", data.reply);
+          } else {
+            addMsg("system", "Нет ответа — проверьте OPENAI_API_KEY в cloud Edge secrets");
+          }
         } catch (err) {
           addMsg("system", String(err.message || err));
         } finally {

@@ -75,7 +75,7 @@ def fetch_history():
     return messages
 
 
-def send_and_wait(user_text: str) -> str | None:
+def send_and_wait(user_text: str) -> tuple[str | None, str | None]:
     msg_id = str(uuid.uuid4())
     content = json.dumps(
         {
@@ -118,10 +118,9 @@ def send_and_wait(user_text: str) -> str | None:
             with conn.cursor() as cur:
                 cur.execute(
                     """
-                    select content
+                    select direction, content
                     from public.messages
                     where conversation_id = %s
-                      and direction = 'outgoing'
                       and created_at >= to_timestamp(%s)
                     order by created_at asc
                     """,
@@ -131,12 +130,20 @@ def send_and_wait(user_text: str) -> str | None:
         finally:
             conn.close()
 
-        texts = [message_text(r[0]) for r in rows if message_text(r[0])]
+        texts = []
+        for direction, content in rows:
+            text = message_text(content)
+            if not text:
+                continue
+            if direction == "internal":
+                return None, text
+            if direction == "outgoing":
+                texts.append(text)
         if texts:
-            return "\n\n".join(texts)
+            return "\n\n".join(texts), None
         time.sleep(1.5)
 
-    return None
+    return None, "Таймаут: бот не ответил. Проверьте OPENAI_API_KEY в Supabase Edge secrets."
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -193,7 +200,10 @@ class Handler(BaseHTTPRequestHandler):
             if not text:
                 self._json(400, {"error": "text required"})
                 return
-            reply = send_and_wait(text)
+            reply, err = send_and_wait(text)
+            if err:
+                self._json(200, {"error": err, "reply": None})
+                return
             self._json(200, {"reply": reply})
         except Exception as exc:
             self._json(500, {"error": str(exc)})
