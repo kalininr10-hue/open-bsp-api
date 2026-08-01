@@ -71,7 +71,6 @@ def main() -> int:
     org_extra = {
         "response_delay_seconds": 0,
         "default_agent_id": AGENT_ID,
-        "welcome_message": "Chiptuning R10 на связи.",
     }
 
     conn = connect()
@@ -106,6 +105,14 @@ def main() -> int:
                     where id = %s
                     """,
                     (json.dumps({"default_agent_id": AGENT_ID}), ORG_ID),
+                )
+                cur.execute(
+                    """
+                    update public.organizations
+                    set extra = extra - 'welcome_message'
+                    where id = %s and extra ? 'welcome_message'
+                    """,
+                    (ORG_ID,),
                 )
     finally:
         conn.close()
