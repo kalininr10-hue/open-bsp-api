@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "description": "Fiction regression scenarios for R10 chip-tuning training bot. Never use live WA numbers.",
+    "fiction_phone": "87776543210",
+    "session_prefix": "regression:"
+  },
+  "cases": [
+    {
+      "id": "opener-chip-almaty-camry",
+      "session": "regression:chiptuning-opener-almaty-camry-v1",
+      "language": "ru",
+      "turns": [
+        { "role": "user", "text": "Чип тюнинг" },
+        { "role": "user", "text": "Алматы" },
+        { "role": "user", "text": "Toyota Camry 2018 2.5" },
+        { "role": "user", "text": "87776543210" }
+      ],
+      "expect": {
+        "slots": ["service", "city", "vehicle", "phone"],
+        "no_repeat_ask": ["city", "vehicle"],
+        "max_questions_per_turn": 1
+      }
+    },
+    {
+      "id": "kz-sticky-after-weak-ru-opener",
+      "session": "regression:chiptuning-kz-sticky-v1",
+      "language": "kz",
+      "turns": [
+        { "role": "user", "text": "Чип тюнинг" },
+        { "role": "user", "text": "Астана" },
+        { "role": "user", "text": "қазақша жазыңыз" },
+        { "role": "user", "text": "Haval H6 2021" }
+      ],
+      "expect": {
+        "sticky_language": "kz",
+        "slots_partial": ["city", "vehicle"]
+      }
+    },
+    {
+      "id": "decline-pre-2005",
+      "session": "regression:chiptuning-year-decline-v1",
+      "language": "ru",
+      "turns": [
+        { "role": "user", "text": "Прошивка" },
+        { "role": "user", "text": "Шымкент" },
+        { "role": "user", "text": "Lada Priora 2004" }
+      ],
+      "expect": {
+        "decline_year_before": 2005,
+        "no_phone_ask": true
+      }
+    },
+    {
+      "id": "faq-price-mid-lead",
+      "session": "regression:chiptuning-faq-price-v1",
+      "language": "ru",
+      "turns": [
+        { "role": "user", "text": "Чип тюнинг Алматы" },
+        { "role": "user", "text": "Сколько стоит?" },
+        { "role": "user", "text": "Kia K5 2020" }
+      ],
+      "expect": {
+        "faq_answer_short": true,
+        "continues_to_phone": true
+      }
+    },
+    {
+      "id": "variator-fear-comment",
+      "session": "regression:chiptuning-variator-v1",
+      "language": "ru",
+      "turns": [
+        { "role": "user", "text": "Вариатор до свидания не сделает потом?" }
+      ],
+      "expect": {
+        "contains_safe_torque_truth": true
+      }
+    },
+    {
+      "id": "catalog-typo-haval",
+      "session": "regression:chiptuning-typo-haval-v1",
+      "language": "ru",
+      "turns": [
+        { "role": "user", "text": "Чип" },
+        { "role": "user", "text": "Караганда" },
+        { "role": "user", "text": "Хавал Н6 22 год" }
+      ],
+      "expect": {
+        "vehicle_normalized": "Haval H6",
+        "year": 2022
+      }
+    }
+  ]
+}

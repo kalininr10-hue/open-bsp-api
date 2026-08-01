@@ -1,0 +1,56 @@
+name: R10 Chip Tuning Training
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, r10/chiptuning-training]
+    paths:
+      - "r10/instructions/**"
+      - "r10/scenarios/**"
+      - "scripts/sync-r10-agent.py"
+      - ".github/workflows/r10-chiptuning-training.yml"
+
+jobs:
+  sync-instructions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install psycopg2
+        run: pip install psycopg2-binary
+
+      - name: Sync instructions to Supabase cloud agent
+        env:
+          SUPABASE_PROJECT_ID: ${{ vars.SUPABASE_PROJECT_ID }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+          SUPABASE_SESSION_POOLER_HOST: ${{ vars.SUPABASE_SESSION_POOLER_HOST }}
+          R10_AGENT_MODEL: gpt-4.1-mini
+        run: python3 scripts/sync-r10-agent.py
+
+      - name: Set OPENAI_API_KEY edge secret (if configured)
+        if: ${{ secrets.OPENAI_API_KEY != '' }}
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+        run: |
+          curl -sS -X PATCH \
+            "https://api.supabase.com/v1/projects/${{ vars.SUPABASE_PROJECT_ID }}/secrets" \
+            -H "Authorization: Bearer ${SUPABASE_ACCESS_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d "[{\"name\":\"OPENAI_API_KEY\",\"value\":\"${{ secrets.OPENAI_API_KEY }}\"}]"
+
+  validate-scenarios:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate fiction scenario JSON
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, sys
+          p = pathlib.Path("r10/scenarios/fiction-smoke.json")
+          data = json.loads(p.read_text(encoding="utf-8"))
+          assert data["meta"]["fiction_phone"] == "87776543210"
+          assert data["meta"]["session_prefix"] == "regression:"
+          for c in data["cases"]:
+              assert c["session"].startswith("regression:")
+          print("OK fiction-smoke.json", len(data["cases"]), "cases")
+          PY
