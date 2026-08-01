@@ -64,7 +64,6 @@ def main() -> int:
         "protocol": "chat_completions",
         "api_url": "openai",
         "model": model,
-        "temperature": 0.4,
         "max_tokens": 512,
         "instructions": instructions,
     }
