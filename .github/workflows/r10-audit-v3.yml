@@ -5,8 +5,8 @@ on:
   push:
     branches: [main]
     paths:
-      - '.github/workflows/r10-audit-v3.yml'
-      - 'scripts/r10-audit-v3-github.py'
+      - ".github/workflows/r10-audit-v3.yml"
+      - "scripts/r10-audit-v3-github.py"
 
 jobs:
   audit:
