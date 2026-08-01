@@ -31,4 +31,17 @@ Fixed IDs:
 ```bash
 export SUPABASE_DB_PASSWORD='...'
 python3 scripts/sync-r10-agent.py
+python3 scripts/bootstrap-training-chat.py
 ```
+
+## Browser training chat (без WhatsApp)
+
+Локальный сервер пишет в cloud DB (`service=local`), agent-client отвечает через Edge Functions.
+
+```powershell
+$env:SUPABASE_DB_PASSWORD = '...'
+python scripts/bootstrap-training-chat.py
+python r10/dev/training-chat-server.py
+```
+
+Откройте **http://127.0.0.1:8787** — чат в браузере. Нужен `OPENAI_API_KEY` в [Edge secrets](https://supabase.com/dashboard/project/sywrcfyhbdnpferfeama/functions/secrets) cloud-проекта.

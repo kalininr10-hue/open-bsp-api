@@ -56,12 +56,13 @@ def connect():
 def main() -> int:
     instructions = load_instructions()
     sha = hashlib.sha256(instructions.encode("utf-8")).hexdigest()
-    model = os.environ.get("R10_AGENT_MODEL", "gpt-4.1-mini")
+    model = os.environ.get("R10_AGENT_MODEL", "gpt-5-mini")
 
     agent_extra = {
         "mode": "active",
         "description": "R10 chip-tuning training agent (fiction sandbox)",
         "protocol": "chat_completions",
+        "api_url": "openai",
         "model": model,
         "temperature": 0.4,
         "max_tokens": 512,
