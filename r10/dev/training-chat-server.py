@@ -202,7 +202,7 @@ class Handler(BaseHTTPRequestHandler):
 def main():
     if not HTML.is_file():
         raise SystemExit(f"missing {HTML}")
-    print(f"R10 training chat → http://{HOST}:{PORT}")
+    print(f"R10 training chat: http://{HOST}:{PORT}")
     print("Ctrl+C to stop")
     server = ThreadingHTTPServer((HOST, PORT), Handler)
     server.serve_forever()
