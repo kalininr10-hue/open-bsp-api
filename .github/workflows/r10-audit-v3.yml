@@ -1,0 +1,25 @@
+name: R10 Audit v3 (GitHub)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/r10-audit-v3.yml'
+      - 'scripts/r10-audit-v3-github.py'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: BSP check (fmt, lint, types)
+        run: |
+          deno fmt --check
+          cd supabase/functions && deno lint && deno check .
+          cd ../../plugin && deno lint && deno check .
+      - name: R10 audit v3 (GitHub-safe)
+        run: python3 scripts/r10-audit-v3-github.py
