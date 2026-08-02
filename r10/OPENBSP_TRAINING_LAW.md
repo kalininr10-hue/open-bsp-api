@@ -1,10 +1,15 @@
 # R10 training law (OpenBSP manufacturer)
 
-**Project law:** OpenBSP `AgentExtra` schema + `r10/instructions/chiptuning-v1.md` = source of truth on GitHub.
+**Project law:** OpenBSP `AgentExtra` + `r10/instructions/chiptuning-v1.md` = GitHub source of truth.
 
-- `instructions` field = prompt markdown only
-- LLM params = `scripts/sync-r10-agent.py` (not inside markdown)
-- No R10 combat seatbelt code in this repo (`r10DeliveryOnly`, catalog, routing)
-- See `r10/README.md` in this repo
+| Layer | Rule |
+|-------|------|
+| Prompt | `instructions/chiptuning-v1.md` only |
+| LLM params | `scripts/sync-r10-agent.py` → DB `agents.extra` |
+| API key | `OPENAI_API_KEY` GitHub secret → `sync-agent-apikey-from-env.py` — **no prod** |
+| Platform | vanilla OpenBSP Edge — **no** `r10*` combat code |
+| Fiction | `regression:` + `87776543210` |
 
-Canon: upstream OpenBSP README § AgentExtra.
+**Forbidden:** prod SSH, `api.r10.kz`, combat seatbelts (`r10DeliveryOnly`, catalog, routing), combat audit workflows.
+
+Canon: OpenBSP README § AgentExtra · `scripts/README.md`
