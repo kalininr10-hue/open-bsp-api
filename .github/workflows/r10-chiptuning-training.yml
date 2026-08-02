@@ -28,7 +28,7 @@ jobs:
           SUPABASE_PROJECT_ID: ${{ vars.SUPABASE_PROJECT_ID }}
           SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
           SUPABASE_SESSION_POOLER_HOST: ${{ vars.SUPABASE_SESSION_POOLER_HOST }}
-          R10_AGENT_MODEL: gpt-5-mini
+          R10_AGENT_MODEL: gpt-4.1-mini
         run: python3 scripts/sync-r10-agent.py
 
       - name: Sync OpenAI api_key to agent (AgentExtra, cloud only)

@@ -13,12 +13,14 @@ from urllib.parse import urlparse
 
 ORG_ID = "a1111111-1111-4111-8111-111111111111"
 AGENT_ID = "a2222222-2222-4222-8222-222222222222"
-CONV_ID = "c3333333-3333-4333-8333-333333333333"
+CONV_ID = os.environ.get(
+    "R10_TRAINING_CONV_ID", "c3333333-3333-4333-8333-333333333333"
+)
 HOST = os.environ.get("R10_TRAINING_CHAT_HOST", "127.0.0.1")
 PORT = int(os.environ.get("R10_TRAINING_CHAT_PORT", "8787"))
 HTML = Path(__file__).with_name("training-chat.html")
-POLL_SECS = 45
-WAIT_AFTER_SEND = 4.0
+POLL_SECS = int(os.environ.get("R10_TRAINING_POLL_SECS", "90"))
+WAIT_AFTER_SEND = float(os.environ.get("R10_TRAINING_WAIT_AFTER_SEND", "6"))
 
 
 def connect():

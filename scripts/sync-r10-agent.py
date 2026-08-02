@@ -60,7 +60,7 @@ def connect():
 def main() -> int:
     instructions = load_instructions()
     sha = hashlib.sha256(instructions.encode("utf-8")).hexdigest()
-    model = os.environ.get("R10_AGENT_MODEL", "gpt-5-mini")
+    model = os.environ.get("R10_AGENT_MODEL", "gpt-4.1-mini")
 
     agent_extra = {
         "mode": "active",
