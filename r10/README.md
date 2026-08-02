@@ -7,7 +7,7 @@ Not combat `api.r10.kz`. No R10 seatbelt code (`r10DeliveryOnly`, catalog, routi
 
 | Path | OpenBSP field / role |
 |------|----------------------|
-| `instructions/chiptuning-v1.md` | `agents.extra.instructions` — prompt only (dialogue law) |
+| `instructions/chiptuning-v1.md` | `agents.extra.instructions` — prompt only (dialogue law, RU snapshot from prod DB) |
 | `scripts/sync-r10-agent.py` | writes all other `AgentExtra` fields to cloud DB |
 | `scenarios/fiction-smoke.json` | fiction regression spec (CI JSON check only) |
 
