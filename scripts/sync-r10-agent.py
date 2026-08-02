@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Sync r10/instructions/chiptuning-v1.md → Supabase cloud agents row (training org)."""
+"""Sync r10/instructions/chiptuning-v1.md → Supabase cloud agents row (training org).
+
+OpenBSP AgentExtra (manufacturer): instructions = prompt text only;
+model, temperature, max_tokens, protocol, api_url = separate extra fields.
+"""
 
 from __future__ import annotations
 
@@ -65,6 +69,7 @@ def main() -> int:
         "api_url": "openai",
         "model": model,
         "max_tokens": 512,
+        "temperature": 1,
         "instructions": instructions,
     }
     org_extra = {
@@ -76,6 +81,19 @@ def main() -> int:
     try:
         with conn:
             with conn.cursor() as cur:
+                cur.execute(
+                    "select extra from public.agents where id = %s",
+                    (AGENT_ID,),
+                )
+                row = cur.fetchone()
+                existing = row[0] if row else {}
+                if isinstance(existing, str):
+                    existing = json.loads(existing)
+                if existing and existing.get("api_key"):
+                    agent_extra["api_key"] = existing["api_key"]
+                if existing and existing.get("api_url"):
+                    agent_extra["api_url"] = existing["api_url"]
+
                 cur.execute(
                     """
                     insert into public.organizations (id, name, extra)
@@ -92,7 +110,7 @@ def main() -> int:
                     values (%s, %s, null, %s, true, %s::jsonb)
                     on conflict (id) do update
                     set name = excluded.name,
-                        extra = excluded.extra::jsonb,
+                        extra = coalesce(agents.extra, '{}'::jsonb) || excluded.extra::jsonb,
                         updated_at = now()
                     """,
                     (AGENT_ID, ORG_ID, AGENT_NAME, json.dumps(agent_extra)),

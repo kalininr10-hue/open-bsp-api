@@ -136,7 +136,10 @@ def send_and_wait(user_text: str) -> tuple[str | None, str | None]:
             if not text:
                 continue
             if direction == "internal":
-                return None, text
+                err = text if isinstance(text, str) else str(text)
+                if "OPENAI" in err.upper() or "API" in err.upper():
+                    return None, err
+                return None, f"Ошибка бота: {err}"
             if direction == "outgoing":
                 texts.append(text)
         if texts:
