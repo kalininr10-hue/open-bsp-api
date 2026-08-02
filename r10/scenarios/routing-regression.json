@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "description": "Routing-wide regression (training). Fiction sandbox only.",
+    "fiction_phone": "87776543210",
+    "session_prefix": "regression:routing:",
+    "resolver": "r10/routing/resolver.py"
+  },
+  "cases": [
+    {
+      "id": "almaty-multi-branch",
+      "dialog": ["Алматы", "чип тюнинг"],
+      "expect": {
+        "client_city": "Алматы",
+        "service_city": "Алматы",
+        "multi_branch": true,
+        "branch_count": 4
+      }
+    },
+    {
+      "id": "pavlodar-single",
+      "dialog": ["Павлодар", "Toyota Camry"],
+      "expect": {
+        "client_city": "Павлодар",
+        "service_city": "Павлодар",
+        "multi_branch": false,
+        "branch_names": ["Stage Lab KZ"]
+      }
+    },
+    {
+      "id": "petropavlovsk-nearest-kostanay",
+      "dialog": ["Петропавловск", "Lada Vesta"],
+      "expect": {
+        "client_city": "Петропавловск",
+        "needs_nearest_consent": true,
+        "hub_city": "Костанай"
+      }
+    },
+    {
+      "id": "oskemen-nearest-semey",
+      "dialog": ["Оскемен", "диагностика"],
+      "expect": {
+        "client_city": "Өскемен",
+        "needs_nearest_consent": true,
+        "hub_city": "Семей"
+      }
+    },
+    {
+      "id": "kokshetau-nearest-astana",
+      "dialog": ["Кокшетау"],
+      "expect": {
+        "client_city": "Кокшетау",
+        "needs_nearest_consent": true,
+        "hub_city": "Астана"
+      }
+    },
+    {
+      "id": "shymkent-multi",
+      "dialog": ["Шымкент"],
+      "expect": {
+        "client_city": "Шымкент",
+        "multi_branch": true,
+        "branch_count": 2
+      }
+    }
+  ]
+}

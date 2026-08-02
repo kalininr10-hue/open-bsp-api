@@ -70,6 +70,11 @@
       "id": "negative-not-vehicle",
       "input": "с 3 проблемами",
       "expect": {}
+    },
+    {
+      "id": "jaguar-diesel-2015-cyrillic",
+      "input": "ягуар дизель 15 год",
+      "expect": { "brand": "JAGUAR" }
     }
   ]
 }

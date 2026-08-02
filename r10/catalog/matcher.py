@@ -13,6 +13,7 @@ from typing import Any
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
 INDEX_PATH = DATA_DIR / "r10_catalog_matcher_index.json"
+BRAND_VARIANTS_PATH = DATA_DIR / "brand_variants.json"
 
 _RAW: list[dict[str, Any]] = []
 _by_token: dict[str, list[int]] = {}
@@ -104,11 +105,37 @@ def _match_from_candidates(text: str, indices: list[int]) -> dict[str, str]:
     return {}
 
 
+def _load_brand_variants() -> dict[str, list[str]]:
+    if not BRAND_VARIANTS_PATH.is_file():
+        return {}
+    data = json.loads(BRAND_VARIANTS_PATH.read_text(encoding="utf-8"))
+    return dict(data.get("brands") or data)
+
+
+def _resolve_brand_from_variants(text: str) -> dict[str, str]:
+    variants = _load_brand_variants()
+    for brand, aliases in variants.items():
+        for alias in aliases:
+            alias_low = str(alias).lower()
+            if len(alias_low) < 2:
+                continue
+            if re.search(
+                rf"(?:^|[^\w]){re.escape(alias_low)}(?:[^\w]|$)",
+                text,
+                re.IGNORECASE | re.UNICODE,
+            ):
+                return {"brand": brand}
+    return {}
+
+
 def resolve_vehicle_from_catalog_blob(blob: str) -> dict[str, str]:
     text = normalize_matcher_text(blob)
     if not text:
         return {}
-    return _match_from_candidates(text, _candidate_indices(text))
+    hit = _match_from_candidates(text, _candidate_indices(text))
+    if hit.get("brand"):
+        return hit
+    return _resolve_brand_from_variants(text)
 
 
 def resolve_vehicle_from_dialog(

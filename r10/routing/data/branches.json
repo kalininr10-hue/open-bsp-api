@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "source": "prod r10RoutingMap.ts R10_BRANCHES (OpenBSP)",
+    "snapshot_date": "2026-08-02"
+  },
+  "branches": [
+    {
+      "name": "CO2",
+      "city": "Алматы",
+      "address": "ул. Саина 12Б/1",
+      "phones": ["+77782652660"],
+      "truck": false
+    },
+    {
+      "name": "ProService",
+      "city": "Алматы",
+      "address": "пр. Суюнбая 491/4, бокс 33",
+      "phones": ["+77788396289", "+77012120659"],
+      "truck": true
+    },
+    {
+      "name": "Vihlop Expert",
+      "city": "Алматы",
+      "address": "ул. Туркебаева 220",
+      "phones": ["+77756784728"],
+      "truck": false
+    },
+    {
+      "name": "Viton",
+      "city": "Алматы",
+      "address": "ул. Аносова 93",
+      "phones": ["+77474956165"],
+      "truck": false
+    },
+    {
+      "name": "Changan Club",
+      "city": "Астана",
+      "address": "Улица Е430 дом 2/2",
+      "phones": ["+77002120012"],
+      "truck": false,
+      "include_brands": ["Changan"]
+    },
+    {
+      "name": "TurboForce",
+      "city": "Астана",
+      "address": "ул. Тайбурыл 23/1",
+      "phones": ["+77073165000", "+77052544870"],
+      "truck": false,
+      "exclude_brands": ["Changan"]
+    },
+    {
+      "name": "10 Region Avto",
+      "city": "Костанай",
+      "address": "Аль-Фараби 117/1",
+      "phones": ["+77471162619", "+77056888146"],
+      "truck": false
+    },
+    {
+      "name": "chipsercvice_r10",
+      "city": "Костанай",
+      "address": "ул. Промышленная 4",
+      "phones": ["+77479798484"],
+      "truck": false
+    },
+    {
+      "name": "AvtoTrade",
+      "city": "Шымкент",
+      "address": "ул. Жибек-Жолы 59а, возле магазина Атлант",
+      "phones": ["+77054365199", "+77025829594"],
+      "truck": false
+    },
+    {
+      "name": "СТО Check Engine",
+      "city": "Шымкент",
+      "address": "ул. Кожанова 14",
+      "phones": ["+77752340022"],
+      "truck": false
+    },
+    {
+      "name": "Stage Lab KZ",
+      "city": "Павлодар",
+      "address": "ул. Российская, 2/1",
+      "phones": ["+77754343555"],
+      "truck": false
+    },
+    {
+      "name": "Nomad Garage",
+      "city": "Экибастуз",
+      "address": "31 Южный проезд 4-3",
+      "phones": ["+77085354049", "+77015319782"],
+      "truck": false
+    },
+    {
+      "name": "MG-GARAGE",
+      "city": "Караганда",
+      "address": "ул. Молокова 55",
+      "phones": ["+77053269796", "+77476559820"],
+      "truck": false
+    },
+    {
+      "name": "Чиптюнинг",
+      "city": "Темиртау",
+      "address": "ул. Сарыарка 18",
+      "phones": ["+77474445950"],
+      "truck": false
+    },
+    {
+      "name": "pro_chip.20",
+      "city": "Жезказган / Сатпаев",
+      "phones": ["+77029632210"],
+      "truck": false
+    },
+    {
+      "name": "Recat.kz",
+      "city": "Семей",
+      "address": "ул. Широкая 27/1",
+      "phones": ["+77078074888"],
+      "truck": false
+    },
+    {
+      "name": "DS Detailing",
+      "city": "Рудный",
+      "address": "ул. Парковая 108/1",
+      "phones": ["+77014044230", "+77004044230"],
+      "truck": false
+    },
+    {
+      "name": "Автомастер 04",
+      "city": "Актобе",
+      "address": "пр. Санкибай батыра 22",
+      "phones": ["+77018886703"],
+      "truck": false
+    },
+    {
+      "name": "GT Garage",
+      "city": "Ташкент",
+      "address": "ул. Чуст 10а",
+      "phones": ["+998935890407", "+998950011178"],
+      "truck": false
+    }
+  ]
+}
