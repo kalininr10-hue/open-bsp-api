@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "description": "Catalog-wide matcher regression (training). Cases from prod acceptance matrix + combat typos.",
+    "fiction_phone": "87776543210",
+    "session_prefix": "regression:catalog:",
+    "matcher": "r10/catalog/matcher.py"
+  },
+  "cases": [
+    {
+      "id": "toyota-camry-latin",
+      "input": "Toyota Camry 2018 2.5",
+      "expect": { "brand": "TOYOTA", "model": "Camry" }
+    },
+    {
+      "id": "toyota-camry-cyrillic",
+      "input": "тойота камри",
+      "expect": { "brand": "TOYOTA" }
+    },
+    {
+      "id": "haval-jolion-cyrillic",
+      "input": "хавал джолион",
+      "expect": { "brand": "HAVAL" }
+    },
+    {
+      "id": "chery-tiggo8-cyrillic",
+      "input": "чери тигго 8",
+      "expect": { "brand": "CHERY" }
+    },
+    {
+      "id": "geely-monjaro-cyrillic",
+      "input": "джили монжаро",
+      "expect": { "brand": "GEELY" }
+    },
+    {
+      "id": "tank-500-not-brand-number",
+      "input": "танк 500",
+      "expect": { "brand": "TANK" }
+    },
+    {
+      "id": "kia-sportage-cyrillic",
+      "input": "киа спортедж",
+      "expect": { "brand": "KIA" }
+    },
+    {
+      "id": "bmw-x5-cyrillic",
+      "input": "бмв х5",
+      "expect": { "brand": "BMW" }
+    },
+    {
+      "id": "jac-s3-pro-typo",
+      "input": "Джак  с 3 про",
+      "expect": { "brand": "JAC" }
+    },
+    {
+      "id": "jac-s3-pro-latin",
+      "input": "jac s3 pro",
+      "expect": { "brand": "JAC" }
+    },
+    {
+      "id": "lada-vesta-cyrillic",
+      "input": "веста 1.6",
+      "expect": { "brand": "LADA" }
+    },
+    {
+      "id": "honda-crv-cyrillic",
+      "input": "хонда срв",
+      "expect": { "brand": "HONDA" }
+    },
+    {
+      "id": "negative-not-vehicle",
+      "input": "с 3 проблемами",
+      "expect": {}
+    }
+  ]
+}

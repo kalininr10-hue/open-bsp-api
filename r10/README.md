@@ -9,7 +9,9 @@ Not combat `api.r10.kz`. No R10 seatbelt code (`r10DeliveryOnly`, catalog, routi
 |------|----------------------|
 | `instructions/chiptuning-v1.md` | `agents.extra.instructions` — prompt only (dialogue law, RU snapshot from prod DB) |
 | `scripts/sync-r10-agent.py` | writes all other `AgentExtra` fields to cloud DB |
-| `scenarios/fiction-smoke.json` | fiction regression spec (CI JSON check only) |
+| `scenarios/fiction-smoke.json` | fiction dialogue regression (CI JSON check only) |
+| `catalog/data/*` + `catalog/matcher.py` | prod dict snapshot + systemic matcher (training only) |
+| `scenarios/catalog-regression.json` | catalog-wide matcher cases (CI) |
 
 ## AgentExtra (OpenBSP manufacturer)
 

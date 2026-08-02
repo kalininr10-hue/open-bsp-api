@@ -7,8 +7,11 @@ on:
     paths:
       - "r10/instructions/**"
       - "r10/scenarios/**"
+      - "r10/catalog/**"
       - "scripts/sync-r10-agent.py"
       - "scripts/sync-agent-apikey-from-env.py"
+      - "scripts/catalog-eval.py"
+      - "scripts/build-sft-catalog-seed.py"
       - ".github/workflows/r10-chiptuning-training.yml"
 
 jobs:
@@ -52,3 +55,12 @@ jobs:
               assert c["session"].startswith("regression:")
           print("OK fiction-smoke.json", len(data["cases"]), "cases")
           PY
+
+  catalog-eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Catalog-wide matcher regression
+        run: python3 scripts/catalog-eval.py
+      - name: Build SFT catalog seed (artifact)
+        run: python3 scripts/build-sft-catalog-seed.py

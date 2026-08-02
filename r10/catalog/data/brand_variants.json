@@ -1,0 +1,1054 @@
+{
+  "brands": {
+    "ABARTH": [
+      "abarth"
+    ],
+    "ACCESS": [
+      "access"
+    ],
+    "ACURA": [
+      "acura"
+    ],
+    "ADAMOTO": [
+      "adamoto"
+    ],
+    "AEON": [
+      "aeon"
+    ],
+    "AGRIFAC": [
+      "agrifac"
+    ],
+    "AITO": [
+      "aito"
+    ],
+    "AIWAYS": [
+      "aiways"
+    ],
+    "AJERRA": [
+      "ajerra"
+    ],
+    "ALFA ROMEO": [
+      "alfa romeo"
+    ],
+    "ALPINE": [
+      "alpine"
+    ],
+    "APRILIA": [
+      "aprilia"
+    ],
+    "ARCTIC CAT": [
+      "arctic cat"
+    ],
+    "ARGO": [
+      "argo"
+    ],
+    "ASHOK LEYLAND": [
+      "ashok leyland"
+    ],
+    "ASTON MARTIN": [
+      "aston martin"
+    ],
+    "ASX / RVR": [
+      "asx / rvr"
+    ],
+    "AUDI": [
+      "audi",
+      "ауди"
+    ],
+    "B-MAX": [
+      "b-max"
+    ],
+    "BAIC": [
+      "baic"
+    ],
+    "BAJAJ": [
+      "bajaj"
+    ],
+    "BALTMOTORS": [
+      "baltmotors"
+    ],
+    "BAOJUN": [
+      "baojun"
+    ],
+    "BARTON": [
+      "barton"
+    ],
+    "BAW": [
+      "baw"
+    ],
+    "BELGEE": [
+      "belgee"
+    ],
+    "BENDA": [
+      "benda"
+    ],
+    "BENELLI": [
+      "benelli"
+    ],
+    "BENNCHE": [
+      "bennche"
+    ],
+    "BENTLEY": [
+      "bentley"
+    ],
+    "BETA": [
+      "beta"
+    ],
+    "BF / BFP": [
+      "bf / bfp"
+    ],
+    "BMW": [
+      "bmw",
+      "бмв",
+      "бээмв"
+    ],
+    "BMW MOTORRAD": [
+      "bmw motorrad"
+    ],
+    "BOBCAT": [
+      "bobcat"
+    ],
+    "BOOM TRIKES": [
+      "boom trikes"
+    ],
+    "BORGWARD": [
+      "borgward"
+    ],
+    "BR-V": [
+      "br-v"
+    ],
+    "BRIGGS & STRATTON": [
+      "briggs & stratton"
+    ],
+    "BRILLIANCE": [
+      "brilliance"
+    ],
+    "BRISTOL": [
+      "bristol"
+    ],
+    "BRIXTON": [
+      "brixton"
+    ],
+    "BRP/SEA-DOO": [
+      "brp/sea-doo"
+    ],
+    "BRP/SKI-DOO": [
+      "brp/ski-doo"
+    ],
+    "BUICK": [
+      "buick"
+    ],
+    "BYD": [
+      "byd",
+      "бид"
+    ],
+    "C-MAX": [
+      "c-max"
+    ],
+    "CADILLAC": [
+      "cadillac"
+    ],
+    "CASE CONSTRUCTION": [
+      "case construction"
+    ],
+    "CF MOTO": [
+      "cf moto"
+    ],
+    "CHANGAN": [
+      "changan",
+      "чанган",
+      "шанган"
+    ],
+    "CHANGHE": [
+      "changhe"
+    ],
+    "CHANGJIANG": [
+      "changjiang"
+    ],
+    "CHERY": [
+      "chery",
+      "чери",
+      "чэри",
+      "черы"
+    ],
+    "CHEVROLET": [
+      "chevrolet",
+      "шевроле",
+      "шеви"
+    ],
+    "CHIRONEX": [
+      "chironex"
+    ],
+    "CHRYSLER": [
+      "chrysler",
+      "крайслер",
+      "крислер"
+    ],
+    "CITROEN": [
+      "citroen",
+      "ситроен"
+    ],
+    "CLAAS": [
+      "claas"
+    ],
+    "CMC": [
+      "cmc"
+    ],
+    "CO-IN": [
+      "co-in"
+    ],
+    "CR-V": [
+      "cr-v"
+    ],
+    "CR-Z": [
+      "cr-z"
+    ],
+    "CUPRA": [
+      "cupra"
+    ],
+    "D-MAX": [
+      "d-max"
+    ],
+    "DACIA": [
+      "dacia"
+    ],
+    "DAELIM": [
+      "daelim"
+    ],
+    "DAEWOO": [
+      "daewoo"
+    ],
+    "DAF": [
+      "daf",
+      "даф"
+    ],
+    "DAIHATSU": [
+      "daihatsu"
+    ],
+    "DALLARA": [
+      "dallara"
+    ],
+    "DATSUN": [
+      "datsun"
+    ],
+    "DAYANG": [
+      "dayang"
+    ],
+    "DERWAYS": [
+      "derways"
+    ],
+    "DFSK": [
+      "dfsk"
+    ],
+    "DODGE": [
+      "dodge"
+    ],
+    "DONGFENG": [
+      "dongfeng",
+      "донгфенг",
+      "донфенг"
+    ],
+    "DOOSAN": [
+      "doosan"
+    ],
+    "DORCEN / DOCAN": [
+      "dorcen / docan"
+    ],
+    "DR": [
+      "dr"
+    ],
+    "DUCATI": [
+      "ducati"
+    ],
+    "EFFA": [
+      "effa"
+    ],
+    "EXEED": [
+      "exeed",
+      "эксид",
+      "ексид"
+    ],
+    "F.B. MONDIAL": [
+      "f.b. mondial"
+    ],
+    "FA / FI": [
+      "fa / fi"
+    ],
+    "FAW": [
+      "faw",
+      "фав"
+    ],
+    "FEKON": [
+      "fekon"
+    ],
+    "FENDT": [
+      "fendt"
+    ],
+    "FERRARI": [
+      "ferrari"
+    ],
+    "FIAT": [
+      "fiat"
+    ],
+    "FODAY": [
+      "foday"
+    ],
+    "FORCE MOTORS": [
+      "force motors"
+    ],
+    "FORD": [
+      "ford",
+      "форд",
+      "форда"
+    ],
+    "FORTHING / FENGXING": [
+      "forthing / fengxing"
+    ],
+    "FOTON": [
+      "foton",
+      "фотон"
+    ],
+    "FR-S": [
+      "fr-s"
+    ],
+    "FREEDOM": [
+      "freedom"
+    ],
+    "GAC": [
+      "gac",
+      "гак"
+    ],
+    "GAOKIN": [
+      "gaokin"
+    ],
+    "GASGAS": [
+      "gasgas"
+    ],
+    "GAZ": [
+      "gaz",
+      "газ"
+    ],
+    "GEELY": [
+      "geely",
+      "гели",
+      "гили",
+      "джили",
+      "жили",
+      "монжаро"
+    ],
+    "GEHL": [
+      "gehl"
+    ],
+    "GENESIS": [
+      "genesis"
+    ],
+    "GMC": [
+      "gmc"
+    ],
+    "GOES": [
+      "goes"
+    ],
+    "GR MOTO": [
+      "gr moto"
+    ],
+    "GREAT WALL": [
+      "great wall"
+    ],
+    "GT-R": [
+      "gt-r"
+    ],
+    "HAFEI": [
+      "hafei"
+    ],
+    "HAIMA": [
+      "haima"
+    ],
+    "HANWAY": [
+      "hanway"
+    ],
+    "HARLEY-DAVIDSON": [
+      "harley-davidson"
+    ],
+    "HARTFORD": [
+      "hartford"
+    ],
+    "HAVAL": [
+      "haval",
+      "хавал",
+      "хаваль",
+      "хавел",
+      "хавэл"
+    ],
+    "HAWTAI": [
+      "hawtai"
+    ],
+    "HERALD": [
+      "herald"
+    ],
+    "HINO": [
+      "hino",
+      "хино"
+    ],
+    "HISUN": [
+      "hisun"
+    ],
+    "HOLDEN": [
+      "holden"
+    ],
+    "HONDA": [
+      "honda",
+      "хонда"
+    ],
+    "HONGQI": [
+      "hongqi"
+    ],
+    "HONGYAN": [
+      "hongyan"
+    ],
+    "HOWO": [
+      "howo",
+      "хово"
+    ],
+    "HUANGHAI": [
+      "huanghai"
+    ],
+    "HUMMER": [
+      "hummer"
+    ],
+    "HUNTER MOTORCYCLES": [
+      "hunter motorcycles"
+    ],
+    "HUSQVARNA": [
+      "husqvarna"
+    ],
+    "HYOSUNG": [
+      "hyosung"
+    ],
+    "HYUNDAI": [
+      "hyundai",
+      "хендай",
+      "хундай",
+      "хёндай",
+      "хундэ"
+    ],
+    "IKCO": [
+      "ikco"
+    ],
+    "IM MOTORS / ZHIJI": [
+      "im motors / zhiji"
+    ],
+    "INDIAN": [
+      "indian"
+    ],
+    "INFINITI": [
+      "infiniti"
+    ],
+    "INTERNATIONAL": [
+      "international"
+    ],
+    "ISUZU": [
+      "isuzu",
+      "исузу"
+    ],
+    "IVECO": [
+      "iveco",
+      "ивеко"
+    ],
+    "JAC": [
+      "jac",
+      "джак",
+      "джиак"
+    ],
+    "JAECOO": [
+      "jaecoo",
+      "джейку",
+      "джаку",
+      "жаку"
+    ],
+    "JAGUAR": [
+      "jaguar"
+    ],
+    "JEEP": [
+      "jeep"
+    ],
+    "JETOUR": [
+      "jetour",
+      "джетур",
+      "жетур"
+    ],
+    "JIALING": [
+      "jialing"
+    ],
+    "JINBEI": [
+      "jinbei"
+    ],
+    "JMC": [
+      "jmc"
+    ],
+    "JOHN DEERE": [
+      "john deere"
+    ],
+    "JOHNNY PAG": [
+      "johnny pag"
+    ],
+    "JUNAK": [
+      "junak"
+    ],
+    "KAIYI": [
+      "kaiyi",
+      "каи",
+      "кайи"
+    ],
+    "KAMAZ": [
+      "kamaz",
+      "камаз"
+    ],
+    "KAWASAKI": [
+      "kawasaki"
+    ],
+    "KEEWAY": [
+      "keeway"
+    ],
+    "KENWORTH": [
+      "kenworth"
+    ],
+    "KIA": [
+      "kia",
+      "киа",
+      "кия"
+    ],
+    "KIDEN": [
+      "kiden"
+    ],
+    "KL MOTORCYCLE": [
+      "kl motorcycle"
+    ],
+    "KOHLER": [
+      "kohler"
+    ],
+    "KOVE / COLOVE": [
+      "kove / colove"
+    ],
+    "KSR MOTO": [
+      "ksr moto"
+    ],
+    "KUBOTA": [
+      "kubota"
+    ],
+    "KYMCO": [
+      "kymco"
+    ],
+    "LADA": [
+      "lada",
+      "ваз",
+      "лада",
+      "vaz"
+    ],
+    "LAMBORGHINI": [
+      "lamborghini"
+    ],
+    "LAMBORGHINI TRACTORS": [
+      "lamborghini tractors"
+    ],
+    "LAMBRETTA": [
+      "lambretta"
+    ],
+    "LANCIA": [
+      "lancia"
+    ],
+    "LAND ROVER": [
+      "land rover",
+      "ленд ровер"
+    ],
+    "LANDINI": [
+      "landini"
+    ],
+    "LANDWIND": [
+      "landwind"
+    ],
+    "LEVC": [
+      "levc"
+    ],
+    "LEXMOTO": [
+      "lexmoto"
+    ],
+    "LEXUS": [
+      "lexus",
+      "лексус"
+    ],
+    "LIFAN": [
+      "lifan",
+      "лифан"
+    ],
+    "LIGIER": [
+      "ligier"
+    ],
+    "LINCOLN": [
+      "lincoln"
+    ],
+    "LINHAI": [
+      "linhai"
+    ],
+    "LIVAN": [
+      "livan",
+      "ливан"
+    ],
+    "LONCIN": [
+      "loncin"
+    ],
+    "LUXGEN": [
+      "luxgen"
+    ],
+    "LYNK&CO": [
+      "lynk&co",
+      "lynk co",
+      "lynk & co",
+      "lynk"
+    ],
+    "MACBOR": [
+      "macbor"
+    ],
+    "MAHINDRA": [
+      "mahindra"
+    ],
+    "MALAGUTI": [
+      "malaguti"
+    ],
+    "MAN": [
+      "man",
+      "ман"
+    ],
+    "MASERATI": [
+      "maserati"
+    ],
+    "MASH": [
+      "mash"
+    ],
+    "MASSEY FERGUSON": [
+      "massey ferguson"
+    ],
+    "MASSIMO": [
+      "massimo"
+    ],
+    "MAZDA": [
+      "mazda",
+      "мазда"
+    ],
+    "MERCEDES-BENZ": [
+      "mercedes-benz",
+      "мерин",
+      "мерс",
+      "мерседес",
+      "mercedes",
+      "benz"
+    ],
+    "MERLO": [
+      "merlo"
+    ],
+    "MG ZS": [
+      "mg zs"
+    ],
+    "MINI": [
+      "mini"
+    ],
+    "MITSUBISHI": [
+      "mitsubishi",
+      "митсубиси",
+      "мицубиси"
+    ],
+    "MITSUBISHI FUSO": [
+      "mitsubishi fuso"
+    ],
+    "MITT": [
+      "mitt"
+    ],
+    "MODA": [
+      "moda"
+    ],
+    "MONDIAL": [
+      "mondial"
+    ],
+    "MOSKVICH": [
+      "moskvich"
+    ],
+    "MOTO GUZZI": [
+      "moto guzzi"
+    ],
+    "MOTO MORINI": [
+      "moto morini"
+    ],
+    "MOTOLUX": [
+      "motolux"
+    ],
+    "MOTRON MOTORCYCLES": [
+      "motron motorcycles"
+    ],
+    "MP-X": [
+      "mp-x"
+    ],
+    "MU-X": [
+      "mu-x"
+    ],
+    "MUTT": [
+      "mutt"
+    ],
+    "MV AGUSTA": [
+      "mv agusta"
+    ],
+    "MVM": [
+      "mvm"
+    ],
+    "NECO": [
+      "neco"
+    ],
+    "NEW HOLLAND": [
+      "new holland"
+    ],
+    "NEW LONGMA": [
+      "new longma"
+    ],
+    "NISSAN": [
+      "nissan",
+      "нисан",
+      "ниссан"
+    ],
+    "ODES / AODES": [
+      "odes / aodes"
+    ],
+    "OMODA": [
+      "omoda",
+      "омода"
+    ],
+    "OPEL": [
+      "opel",
+      "опель"
+    ],
+    "ORA": [
+      "ora"
+    ],
+    "PERODUA": [
+      "perodua"
+    ],
+    "PETERBILT": [
+      "peterbilt"
+    ],
+    "PEUGEOT": [
+      "peugeot",
+      "пежо"
+    ],
+    "PIAGGIO": [
+      "piaggio"
+    ],
+    "POLAR FOX": [
+      "polar fox"
+    ],
+    "POLARIS": [
+      "polaris"
+    ],
+    "PONTIAC": [
+      "pontiac"
+    ],
+    "PORSCHE": [
+      "porsche",
+      "порше"
+    ],
+    "PROTON": [
+      "proton"
+    ],
+    "PS / PES": [
+      "ps / pes"
+    ],
+    "QINGLING": [
+      "qingling"
+    ],
+    "QJ MOTOR": [
+      "qj motor"
+    ],
+    "QOODER": [
+      "qooder"
+    ],
+    "QOROS": [
+      "qoros"
+    ],
+    "QUADRO": [
+      "quadro"
+    ],
+    "RAVON": [
+      "ravon"
+    ],
+    "RENAULT": [
+      "renault",
+      "рено"
+    ],
+    "ROEWE": [
+      "roewe"
+    ],
+    "ROLLS ROYCE": [
+      "rolls royce"
+    ],
+    "ROMET": [
+      "romet"
+    ],
+    "ROYAL ALLOY": [
+      "royal alloy"
+    ],
+    "RUSSKAYA MEHANIKA": [
+      "russkaya mehanika"
+    ],
+    "RXP X": [
+      "rxp x"
+    ],
+    "RXT X": [
+      "rxt x"
+    ],
+    "SAAB": [
+      "saab"
+    ],
+    "SAIC MG / MAXUS": [
+      "saic mg / maxus"
+    ],
+    "SC-R": [
+      "sc-r"
+    ],
+    "SCANIA": [
+      "scania",
+      "скания"
+    ],
+    "SCEO": [
+      "sceo"
+    ],
+    "SCF-R": [
+      "scf-r"
+    ],
+    "SCION": [
+      "scion"
+    ],
+    "SE-R": [
+      "se-r"
+    ],
+    "SEAT": [
+      "seat"
+    ],
+    "SEF-R": [
+      "sef-r"
+    ],
+    "SEGWAY": [
+      "segway"
+    ],
+    "SHACMAN": [
+      "shacman",
+      "шакман",
+      "шахман",
+      "щахман"
+    ],
+    "SHARMAX": [
+      "sharmax"
+    ],
+    "SHINERAY": [
+      "shineray"
+    ],
+    "SHUANGHUAN": [
+      "shuanghuan"
+    ],
+    "SINNIS": [
+      "sinnis"
+    ],
+    "SITRAK": [
+      "sitrak",
+      "ситрак"
+    ],
+    "SKODA": [
+      "skoda",
+      "шкодa",
+      "шкода"
+    ],
+    "SOLLERS": [
+      "sollers"
+    ],
+    "SOUEAST": [
+      "soueast"
+    ],
+    "SSANGYONG": [
+      "ssangyong"
+    ],
+    "ST / DAX": [
+      "st / dax"
+    ],
+    "STALLION": [
+      "stallion"
+    ],
+    "STELS": [
+      "stels"
+    ],
+    "SUBARU": [
+      "subaru",
+      "субару"
+    ],
+    "SUMITOMO": [
+      "sumitomo"
+    ],
+    "SUZUKI": [
+      "suzuki"
+    ],
+    "SUZUKI MARINE": [
+      "suzuki marine"
+    ],
+    "SUZUKI MARUTI": [
+      "suzuki maruti"
+    ],
+    "SWM": [
+      "swm"
+    ],
+    "TAGAZ": [
+      "tagaz"
+    ],
+    "TAKEUCHI": [
+      "takeuchi"
+    ],
+    "TANK": [
+      "tank",
+      "танк"
+    ],
+    "TATA": [
+      "tata"
+    ],
+    "TATA-DAEWOO": [
+      "tata-daewoo"
+    ],
+    "TATRA": [
+      "tatra"
+    ],
+    "TENET": [
+      "tenet"
+    ],
+    "TOGO": [
+      "togo"
+    ],
+    "TOYOTA": [
+      "toyota",
+      "тайота",
+      "тойота",
+      "тойотаа"
+    ],
+    "TRAUM": [
+      "traum"
+    ],
+    "TVS MOTOR": [
+      "tvs motor"
+    ],
+    "UAZ": [
+      "uaz",
+      "уаз",
+      "уазик"
+    ],
+    "UM MOTORCYCLES": [
+      "um motorcycles"
+    ],
+    "UNI-K": [
+      "uni-k"
+    ],
+    "UNI-T": [
+      "uni-t"
+    ],
+    "UNI-V": [
+      "uni-v"
+    ],
+    "UR-V": [
+      "ur-v"
+    ],
+    "VAN HOOL": [
+      "van hool"
+    ],
+    "VANTAGE": [
+      "vantage"
+    ],
+    "VENUCIA": [
+      "venucia"
+    ],
+    "VINFAST": [
+      "vinfast"
+    ],
+    "VINTO": [
+      "vinto"
+    ],
+    "VITACCI": [
+      "vitacci"
+    ],
+    "VOGE": [
+      "voge"
+    ],
+    "VOLKSWAGEN": [
+      "volkswagen",
+      "vw",
+      "фольксваген",
+      "фольцваген"
+    ],
+    "VOLVO": [
+      "volvo",
+      "вольво"
+    ],
+    "VORTEX": [
+      "vortex"
+    ],
+    "WELS": [
+      "wels"
+    ],
+    "WEY": [
+      "wey",
+      "вей"
+    ],
+    "WMOTO": [
+      "wmoto"
+    ],
+    "WR-V": [
+      "wr-v"
+    ],
+    "WULING": [
+      "wuling"
+    ],
+    "X-ADV": [
+      "x-adv"
+    ],
+    "XC-W": [
+      "xc-w"
+    ],
+    "XCMG": [
+      "xcmg"
+    ],
+    "XIGMA": [
+      "xigma"
+    ],
+    "YANMAR": [
+      "yanmar"
+    ],
+    "ZAZ": [
+      "zaz"
+    ],
+    "ZONGSHEN": [
+      "zongshen"
+    ],
+    "ZONTES": [
+      "zontes"
+    ],
+    "ZOTYE": [
+      "zotye"
+    ],
+    "ZR-V": [
+      "zr-v"
+    ],
+    "ZX AUTO": [
+      "zx auto"
+    ],
+    "ZXMOTO": [
+      "zxmoto"
+    ],
+    "RANGE ROVER": [
+      "рендж ровер"
+    ]
+  },
+  "CHEVROLET": [
+    "шевроле",
+    "шеви",
+    "chevrolet"
+  ]
+}
