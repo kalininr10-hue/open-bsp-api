@@ -13,8 +13,6 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "r10" / "routing"))
-from resolver import strip_routing_context, wrap_user_message  # noqa: E402
 
 ORG_ID = "a1111111-1111-4111-8111-111111111111"
 AGENT_ID = "a2222222-2222-4222-8222-222222222222"
@@ -74,7 +72,7 @@ def fetch_history():
 
     messages = []
     for direction, content, _created in rows:
-        text = strip_routing_context(message_text(content))
+        text = message_text(content)
         if not text:
             continue
         role = "user" if direction == "incoming" else "bot"
@@ -83,9 +81,7 @@ def fetch_history():
 
 
 def send_and_wait(user_text: str) -> tuple[str | None, str | None]:
-    history = fetch_history()
-    history_texts = [m["text"] for m in history if m["role"] == "user"]
-    payload_text = wrap_user_message(user_text, history_texts)
+    payload_text = user_text.strip()
 
     msg_id = str(uuid.uuid4())
     content = json.dumps(
